@@ -117,8 +117,6 @@
   </div>
 
   <script>
-    let startTime = Date.now();
-    console.log(startTime);
     const score = document.querySelector('.score');
     const startScreen = document.querySelector('.startScreen');
     const gameArea = document.querySelector('.gameArea');
@@ -189,7 +187,7 @@
           enemyCar.scored = false;
         }
 
-        if (!enemyCar.scored && myCarRearEnd >= enemyCarRearEnd) {
+        if (!enemyCar.scored && myCarRearEnd >= enemyCarRearEnd && myCarRearEnd < enemyCarRearEnd + 90) {
           player.score += 10;
           enemyCar.scored = true;
         }
@@ -266,4 +264,5 @@
   </script>
 
 </body>
+
 </html>
